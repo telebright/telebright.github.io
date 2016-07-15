@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)http://www.findfreewifi.co.za/public/developers#getcities -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        
+    Find Free WiFi in South Africa: Developers
+
+    </title>
+    <link rel="shortcut icon" href="http://www.findfreewifi.co.za/Content/images/favicon.ico" type="image/vnd.microsoft.icon">
+    <meta name="Copyright" content="Broken Keyboards Software ©">
+    <meta name="Creator" content="Created with love by Broken Keyboards Software in South Africa">
+    <meta name="Contents" content="Find Free WiFi in South Africa; where is free wifi in south africa; johannesburg free wifi; cape town wifi; durban free wifi points; clarens wifi spots;jhb wifi locations; wireless; where to find free wifi in south africa">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Find Free WiFi in South Africa">
+    <meta name="author" content="Broken Keyboards Software">
+    <meta name="keywords" content="Find Free WiFi in South Africa; where is free wifi in south africa; johannesburg free wifi; cape town wifi; durban free wifi points; clarens wifi spots;jhb wifi locations; wireless; where to find free wifi in south africa,hotspots,south,africa">
+    
+    <style type="text/css">
+        body
+        {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+        .sidebar-nav
+        {
+            padding: 9px 0;
+        }
+        div#map_canvas
+        {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+        .showMe
+        {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 99;
+        }
+    </style>
+    <link href="./data_files/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="./data_files/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+    <link href="./data_files/findfreewifi.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="../../Scripts/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript" async="" src="./data_files/ga.js"></script><script type="text/javascript" src="./data_files/js"></script>
+<script type="text/javascript" charset="UTF-8" src="./data_files/common.js"></script><script type="text/javascript" charset="UTF-8" src="./data_files/util.js"></script><script type="text/javascript" charset="UTF-8" src="./data_files/stats.js"></script></head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </a><a class="brand" href="http://www.findfreewifi.co.za/">Find Free WiFi</a>
+                <div class="btn-group pull-right">
+                    <button class="btn psCitySelector" data-near-me="true">
+                        Locations near me</button>
+                    
+                    
+                    <a class="btn dropdown-toggle" data-toggle="dropdown" href="http://www.findfreewifi.co.za/public/developers#"><i class="icon-signal">
+                    </i>&nbsp;&nbsp; <span id="spanCurrentCity">Choose a City</span>&nbsp;&nbsp; <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="0" data-city-name="All" data-city-lat="-26.037016666666666" data-city-long="28.07891111111111">Whole of South Africa</a> </li>
+                        <li class="divider"></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="1" data-city-name="Johannesburg" data-city-lat="-26.106339" data-city-long="28.054244">
+                            Johannesburg</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="2" data-city-name="Pretoria" data-city-lat="-25.743236" data-city-long="28.235706">
+                            Pretoria</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="3" data-city-name="Cape Town" data-city-lat="-33.925158" data-city-long="18.424061">
+                            Cape Town</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="4" data-city-name="Durban" data-city-lat="-29.8546006839105" data-city-long="31.0026901003419">
+                            Durban</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="5" data-city-name="Port Elizabeth" data-city-lat="-33.9596" data-city-long="25.591533">
+                            Port Elizabeth</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="6" data-city-name="Centurion" data-city-lat="-25.8603743445066" data-city-long="28.1895946037048">
+                            Centurion</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="7" data-city-name="East London" data-city-lat="-33.0060815045942" data-city-long="27.9020289436523">
+                            East London</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="8" data-city-name="Richards Bay" data-city-lat="-28.7542440150165" data-city-long="32.0476840603882">
+                            Richards Bay</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="9" data-city-name="Pietermaritzburg" data-city-lat="-29.617433048294" data-city-long="30.3827896074097">
+                            Pietermaritzburg</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="10" data-city-name="Volksrust" data-city-lat="-27.3598987082981" data-city-long="29.8933567089844">
+                            Volksrust</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="11" data-city-name="Nelspruit" data-city-lat="-25.4697078144712" data-city-long="30.9803854507568">
+                            Nelspruit</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="12" data-city-name="Witbank" data-city-lat="-25.887200719335" data-city-long="29.23165723291">
+                            Witbank</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="13" data-city-name="Hazyview" data-city-lat="-25.0480242321407" data-city-long="31.1311783359375">
+                            Hazyview</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="14" data-city-name="Malelane" data-city-lat="-25.4895081838406" data-city-long="31.5149400634766">
+                            Malelane</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="16" data-city-name="Bloemfontein" data-city-lat="-29.1177491334543" data-city-long="26.2194268359375">
+                            Bloemfontein</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="17" data-city-name="Kroonstad" data-city-lat="-27.6496958846458" data-city-long="27.2331616386231">
+                            Kroonstad</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="18" data-city-name="Kimberley" data-city-lat="-28.7296663242146" data-city-long="24.7505209417725">
+                            Kimberley</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="19" data-city-name="Ficksburg" data-city-lat="-28.8750472848659" data-city-long="27.8769094703614">
+                            Ficksburg</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="20" data-city-name="Clarens" data-city-lat="-28.5153845936636" data-city-long="28.4207865730468">
+                            Clarens</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="21" data-city-name="Tzaneen" data-city-lat="-23.83308" data-city-long="30.1564068306884">
+                            Tzaneen</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="22" data-city-name="Cradock" data-city-lat="-32.1689946919523" data-city-long="25.6150399682617">
+                            Cradock</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="23" data-city-name="Knysna" data-city-lat="-34.0513270107193" data-city-long="23.077824689502">
+                            Knysna</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="24" data-city-name="Somerset West" data-city-lat="-34.0793561054336" data-city-long="18.8460597460937">
+                            Somerset West</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="25" data-city-name="Grahamstown" data-city-lat="-33.310955" data-city-long="26.521937">
+                            Grahamstown</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="26" data-city-name="Mossel Bay" data-city-lat="-34.1814161992223" data-city-long="22.1339770301636">
+                            Mossel Bay</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="27" data-city-name="Bathurst" data-city-lat="-33.4863756843564" data-city-long="26.8331616386231">
+                            Bathurst</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="28" data-city-name="Plettenberg Bay" data-city-lat="-34.0517778552145" data-city-long="23.3704003349487">
+                            Plettenberg Bay</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="29" data-city-name="Dullstroom" data-city-lat="-25.4174623288274" data-city-long="30.1076030731201">
+                            Dullstroom</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="30" data-city-name="Jeffreys Bay" data-city-lat="-34.0408538874474" data-city-long="24.9230861663818">
+                            Jeffreys Bay</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="31" data-city-name="Bethal" data-city-lat="-26.4567423428481" data-city-long="29.4681644439697">
+                            Bethal</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="32" data-city-name="Rustenberg" data-city-lat="-25.6684508814955" data-city-long="27.238883972168">
+                            Rustenberg</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="33" data-city-name="Hartebeespoort" data-city-lat="-25.743003105826" data-city-long="27.9078483581543">
+                            Hartebeespoort</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="34" data-city-name="Potchefstroom" data-city-lat="-26.7146403917708" data-city-long="27.0950317382813">
+                            Potchefstroom</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="35" data-city-name="Midlands" data-city-lat="-29.354181074128" data-city-long="29.9971175193787">
+                            Midlands</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="36" data-city-name="Sabie" data-city-lat="-25.0889414453425" data-city-long="30.7807102199877">
+                            Sabie</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="37" data-city-name="Lydenburg" data-city-lat="-25.0958594528971" data-city-long="30.4555002454435">
+                            Lydenburg</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="42" data-city-name="Belfast Mpumalanga" data-city-lat="-25.7160181191514" data-city-long="30.0579578876932">
+                            Belfast Mpumalanga</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="43" data-city-name="Carletonville" data-city-lat="-26.3585352274648" data-city-long="">
+                            Carletonville</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="45" data-city-name="Brits" data-city-lat="-25.6352972809642" data-city-long="27.7787239558529">
+                            Brits</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="46" data-city-name="George" data-city-lat="-33.9715443" data-city-long="22.4517743">
+                            George</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="47" data-city-name="Uitenhage" data-city-lat="" data-city-long="">
+                            Uitenhage</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="48" data-city-name="Paarl" data-city-lat="" data-city-long="">
+                            Paarl</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="49" data-city-name="Stellenbosch" data-city-lat="" data-city-long="">
+                            Stellenbosch</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="50" data-city-name="King Williamstown" data-city-lat="" data-city-long="">
+                            King Williamstown</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="51" data-city-name="Broederstroom" data-city-lat="-25.8024412313358" data-city-long="27.8760130412411">
+                            Broederstroom</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="52" data-city-name="Vereeniging" data-city-lat="-26.673611" data-city-long="27.931944">
+                            Vereeniging</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="57" data-city-name="Shelly Beach" data-city-lat="-30.8086110097958" data-city-long="30.409669160581">
+                            Shelly Beach</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="58" data-city-name="Kempton Park" data-city-lat="-26.1055813110753" data-city-long="28.2224028107885">
+                            Kempton Park</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="59" data-city-name="Naboomspruit,Limpopo" data-city-lat="-24.5183498699414" data-city-long="28.7146418092016">
+                            Naboomspruit,Limpopo</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="60" data-city-name="Beacon Bay" data-city-lat="-32.9541603808895" data-city-long="27.933481692744">
+                            Beacon Bay</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="61" data-city-name="Lephalale" data-city-lat="-23.6782108088228" data-city-long="27.7401208886295">
+                            Lephalale</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="62" data-city-name="MooiNooi, Northwest " data-city-lat="-25.7519661396748" data-city-long="27.5585585833687">
+                            MooiNooi, Northwest </a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="63" data-city-name="Meyerton" data-city-lat="-26.5577448301778" data-city-long="28.0139207842149">
+                            Meyerton</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="64" data-city-name="Vanderbijll Park" data-city-lat="-26.7087750756254" data-city-long="27.8227400780816">
+                            Vanderbijll Park</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="65" data-city-name="Beaufort West" data-city-lat="-32.3453430924595" data-city-long="22.582347393145">
+                            Beaufort West</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="66" data-city-name="Parys" data-city-lat="-26.9006781369014" data-city-long="27.453495740192">
+                            Parys</a></li>
+                        
+                        
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#" class="psCitySelector" data-city-id="67" data-city-name="Port Alfred" data-city-lat="-33.587206" data-city-long="26.886707">
+                            Port Alfred</a></li>
+                        
+                    </ul>
+
+
+                </div>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        
+                        <li id="menuAbout">
+                            <a href="http://www.findfreewifi.co.za/Public/About">About</a></li>
+                        <li id="menuDevelopers" class="active">
+                            <a href="http://www.findfreewifi.co.za/Public/Developers">Developers</a></li>
+                        <li>
+                            <a href="http://www.findfreewifi.co.za/Mobile">Mobile Site</a></li>
+                        <li>
+                            <a href="http://www.findfreewifi.co.za/public/developers" id="btnAddWiFiSpot">Add WiFi Spot</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <script src="./data_files/jquery.1.7.2.js" type="text/javascript"></script>
+    <script src="./data_files/bootstrap.js" type="text/javascript"></script>
+    <script src="./data_files/findfreewifi.dev.js" type="text/javascript"></script>
+    
+    <script src="./data_files/prettify.js" type="text/javascript"></script>
+    <link href="./data_files/prettify.css" rel="stylesheet" type="text/css">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="well sidebar-nav" style="position:fixed;">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">API end points</li>
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#locationsnear">Locations Near</a></li>
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#locationsbycity">Locations By City</a></li>
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#addinglocations">Add Locations</a></li>
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#getcities">Get List of Cities</a></li>
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#kml">Get KML export</a></li>
+                        <li><a href="http://www.findfreewifi.co.za/public/developers#csv">Get CSV export</a></li>
+                    </ul>
+                </div>
+                <!--/.well -->
+            </div>
+            <!--/span-->
+            <div class="span9">
+                <div class="hero-unit">
+                    <h2>
+                        Welcome to the FindFreeWiFi API docs</h2>
+                    <br>
+                    <p>
+                        Here is all the documentation we think you'd need to build something awesome on
+                        top of our WiFi location data.</p>
+                    <p>
+                        It's all free - no API key or registration required.</p>
+                    <p>
+                        Please let us know what you're building and how you use our data. We'd love to help
+                        by adding more API goodness to help you and your team.</p>
+
+                    <p>Build something amazing!</p>
+                </div>
+                <div class="row-fluid">
+                    <div class="span9">
+                        <div class="page-header">
+                            <h1>
+                                <a name="locationsnear"></a> Locations Near <small> returns the locations based on latitude &amp; longitude</small>
+                            </h1>
+                        </div>
+                        <h3>
+                            Explanation</h3>
+                        <p>
+                            This call will return a list of locations ordered from nearest to furthest.
+                        </p>
+                        <h3>
+                            Example HTTP GET</h3>
+                        <pre class="prettyprint">http://www.findfreewifi.co.za/publicjson/locationsnear?lat=-26.04375187772609&amp;lng=28.09076412071545
+                            </pre>
+                            <p>
+                            Results aren't limited, but if you'd prefer less, then just supply a "topX" parameter:
+                            </p>
+                            <pre class="prettyprint">http://www.findfreewifi.co.za/publicjson/locationsnear?lat=-26.04375187772609&amp;lng=28.09076412071545&amp;topX=5
+                            </pre>
+                        <h3>
+                            Example return values</h3>
+                        <p>
+                            The call will return a JSON object.  The first part called <b>message</b> is <i>out of band communication</i> and will be used in future to warn about overuse, etc...
+                            <br>
+                            The second part, <b>data</b>, contains zero or many elements with the location information.
+                        </p>
+                        <pre class="prettyprint">{
+    "data": [{
+        "ID": 68,
+        "Address": "Woodmead",
+        "OpeningTime": "6 am",
+        "Name": "Holiday Inn Express",
+        "ClosingTime": "10 pm",
+        "CoLocatedService": "Restaurant",
+        "Description": null,
+        "CredentialRequest": "None",
+        "ConnectionTimeLimit": 0,
+        "BestReceptionSpot": "Unknown",
+        "ConnectionDataLimit": 30,
+        "Lat": -26.04340485810253,
+        "PasswordControl": "None",
+        "Long": 28.091343477862665,
+        "Direction": "NE",
+        "DistanceFromMe": 0.06956000293017657,
+        "FullDirection": "North East",
+        "ServiceProvider": "WirelessG"
+    }, {
+        "ID": 16,
+        "Address": "Shop 64, Woodmead Retail Park, Woodmead Drive",
+        "OpeningTime": "7 am",
+        "Name": "Mugg &amp; Bean",
+        "ClosingTime": "7 pm",
+        "CoLocatedService": "Restaurant",
+        "Description": null,
+        "CredentialRequest": "None",
+        "ConnectionTimeLimit": 0,
+        "BestReceptionSpot": "Inside",
+        "ConnectionDataLimit": 30,
+        "Lat": -26.047896754937039,
+        "PasswordControl": "None",
+        "Long": 28.091708258288691,
+        "Direction": "S",
+        "DistanceFromMe": 0.470419194747921,
+        "FullDirection": "South",
+        "ServiceProvider": "Unknown"
+    }],
+    "message": {
+        "Success": true,
+        "Reason": ""
+    }
+}
+                        </pre>
+                        <p>
+                           The "DistanceFromMe" value is in kilometers.
+                        </p>
+                        <p>
+                            A value of 0 for  "ConnectionTimeLimit" means unlimited time (i.e. no time cap) at that WiFi spot.
+                        </p>
+                        <p>
+                            A value of 0 for  "ConnectionDataLimit" means unlimited data (i.e. no data cap) at that WiFi spot.
+                        </p>
+                    </div>
+                    <!--/span-->
+                </div>
+                <!--/row-->
+
+
+                 <div class="row-fluid">
+                    <div class="span9">
+                        <div class="page-header">
+                            <h1>
+                                <a name="locationsbycity"></a> Locations by city <small> returns the top x locations for a city</small>
+                            </h1>
+                        </div>
+                        <h3>
+                            Explanation</h3>
+                        <p>
+                            This call will return locations for the supplied city name
+                        </p>
+                        <h3>
+                            Example HTTP GET</h3>
+                        <pre class="prettyprint">http://www.findfreewifi.co.za/publicjson/Locations?cityName=Johannesburg
+                            </pre>
+                            <p>
+                            Results aren't limited, but if you'd prefer less, then just supply a "topX" parameter:
+                            </p>
+                            <pre class="prettyprint">http://www.findfreewifi.co.za/publicjson/Locations?cityName=Johannesburg&amp;topX=5
+                            </pre>
+                        <h3>
+                            Example return values</h3>
+                        <p>
+                            The call will return a JSON object.  The first part called <b>message</b> is <i>out of band communication</i> and will be used in future to warn about overuse, etc...
+                            <br>
+                            The second part, <b>data</b>, contains zero or many elements with the location information.  Results are returned in alphabetical order using the <b>name</b> of the location.
+                        </p>
+                        <pre class="prettyprint">{
+    "data": [{
+        "Name": "Andiccio 24 ",
+        "OpeningTime": "8am",
+        "Address": "Cambridge Crossing, Corner Witkoppen &amp; Stonehaven Road, Paulshof, South Africa",
+        "ID": 87,
+        "CoLocatedService": "Restaurant",
+        "ConnectionDataLimit": null,
+        "ConnectionTimeLimit": null,
+        "ServiceProvider": "Unknown",
+        "Lat": -26.106339,
+        "Long": 28.054244
+    }, {
+        "Name": "Andiccio 24 ",
+        "OpeningTime": "8am",
+        "Address": "Sandton Court Shopping Centre, Corner Rivonia Road &amp; South Rd, Sandton, South Africa",
+        "ID": 88,
+        "CoLocatedService": "Restaurant",
+        "ConnectionDataLimit": null,
+        "ConnectionTimeLimit": null,
+        "ServiceProvider": "Unknown",
+        "Lat": -26.106339,
+        "Long": 28.054244
+    }],
+    "message": {
+        "Success": true,
+        "Reason": ""
+    }
+}
+                        </pre>                    
+                        <p>
+                            A value of 0 for  "ConnectionTimeLimit" means unlimited time (i.e. no time cap) at that WiFi spot.
+                        </p>
+                        <p>
+                            A value of 0 for  "ConnectionDataLimit" means unlimited data (i.e. no data cap) at that WiFi spot.
+                        </p>    
+                    </div>
+                    <!--/span-->
+                </div>
+                <!--/row-->
+
+
+
+                
+
+                 <div class="row-fluid">
+                    <div class="span9">
+                        <div class="page-header">
+                            <h1>
+                                <a name="addinglocations"></a> Adding locations <small> </small>
+                            </h1>
+                        </div>
+                        <h3>
+                            Explanation</h3>
+                        <p>
+                            This end point allows you to add locations into our workflow.  All reported locations will need to be reviewed to ensure accuracy, etc...
+                        </p>
+                        <h3>
+                            Example HTTP POST</h3>
+                        <pre class="prettyprint">http://www.findfreewifi.co.za/publicjson/addlocation
+                            </pre>
+                            
+                        <h3>
+                            Example HTTP POST values</h3>
+                        <p>
+                        Here is example code using jQuery which demonstrates how to use HTTP POST to add to our workflow of locations.
+                        </p>
+                        <pre class="prettyprint"> $(function () {
+
+     var newLocation = {
+         Name: "new location",
+         Address: "1 Main Street, Sandton",
+         City: "Johannesburg",
+         Lat: -26.04375187772609,
+         Lng: 28.09076412071545,
+         ServiceProvider: "My Neighbor",
+         ColocatedService: "None",
+         DataLimit: 0,
+         TimeLimit: 0,
+         ReporterIdentifier: "Simon"
+     };
+     $.ajax({
+         url: 'http://www.findfreewifi.co.za/publicjson/addlocation',
+         data: newLocation,
+         dataType: 'json',
+         type: 'POST',
+         success: function (data) {
+             if (data.Success == true) {
+                 alert("done!");
+             } else {
+                 alert("failed: " + data.Message);
+             }
+         }
+     });
+
+ });
+                        </pre>
+                        <p>
+                        The <b>Lat</b> and <b>Lng</b> pairs are nullable and can be omitted if not known.</p>
+                        <p>
+                               The <b>ReporterIdentifier</b> allows us to get in contact with you should we need more clarification.  Feel free to use your Twitter handle/email address.
+                        </p>    
+                        <p>
+                        The following will be returned to indicate success:
+                        </p>                    
+                        <pre class="prettyprint">{
+    "Success": true,
+    "Message": "Thanks!"
+}
+                        </pre>
+                    </div>
+                    <!--/span-->
+                </div>
+                <!--/row-->
+
+
+
+
+
+
+
+                 <div class="row-fluid">
+                    <div class="span9">
+                        <div class="page-header">
+                            <h1>
+                                <a name="getcities"></a> Get List of Cities<small> </small>
+                            </h1>
+                        </div>
+                        <h3>
+                            Explanation</h3>
+                        <p>
+                            This call returns all cities that currently have at least 1 location listed.
+                        </p>
+                        <p>
+                            The "isTown" flag can be used to separate cities vs towns on the front end.  
+                        </p>
+                        <p>
+                            The "Id" value is our internal identifier and won't change going forward.</p>
+                        <h3>
+                            Example HTTP GET</h3>
+                        <pre class="prettyprint">http://www.findfreewifi.co.za/publicjson/getcities
+                            </pre>
+                            
+                        <h3>
+                            Example return values</h3>
+                        <p>
+                            The call will return a JSON object.  The first part called <b>message</b> is <i>out of band communication</i> and will be used in future to warn about overuse, etc...
+                            <br>
+                            The second part, <b>data</b>, contains zero or many elements with the city/town information.  Results are returned in alphabetical order using the <b>name</b> of the city/town.
+                        </p>
+                        <pre class="prettyprint">{
+    "data": [{
+        "Id": 1,
+        "isTown": false,
+        "Name": "Johannesburg",
+        "Lat": -26.106339,
+        "Long": 28.054244
+    }, {
+        "Id": 2,
+        "isTown": false,
+        "Name": "Pretoria",
+        "Lat": -25.743236,
+        "Long": 28.235706
+    }],
+    "message": {
+        "Success": true,
+        "Reason": ""
+    }
+}
+                        </pre> 
+                    </div>
+                    <!--/span-->
+                </div>
+                <!--/row-->
+
+
+
+                 <div class="row-fluid">
+                    <div class="span9">
+                        <div class="page-header">
+                            <h1>
+                                <a name="kml"></a> Get KML Export<small> </small>
+                            </h1>
+                        </div>
+                        <h3>
+                            Explanation</h3>
+                        <p>
+                            This call returns a KML file for use in Google Earth and other programs.
+                        </p>
+                        <h3>
+                            Example HTTP GET</h3>
+                        <pre class="prettyprint">http://www.findfreewifi.co.za/publicjson/kml
+                            </pre>
+                        <p>
+                            An optional <i>city</i> name can be provided to limit the resulting file.
+                        </p>                            
+                        <pre class="prettyprint">http://www.findfreewifi.co.za/publicjson/kml?city=Johannesburg
+                            </pre> 
+                        <p>
+                            Currently, our site only lists hotspots in South Africa.
+                        </p>
+                    </div>
+                    <!--/span-->
+                </div>
+                <!--/row-->
+
+                 <div class="row-fluid">
+                    <div class="span9">
+                        <div class="page-header">
+                            <h1>
+                                <a name="csv"></a> Get CSV Export<small> </small>
+                            </h1>
+                        </div>
+                        <h3>
+                            Explanation</h3>
+                        <p>
+                            This call returns a CSV file.
+                        </p>
+                        <h3>
+                            Example HTTP GET</h3>
+                        <pre class="prettyprint">http://www.findfreewifi.co.za/publicjson/csv
+                            </pre>
+                        <p>
+                            An optional <i>city</i> name can be provided to limit the resulting file.
+                        </p>                            
+                        <pre class="prettyprint">http://www.findfreewifi.co.za/publicjson/csv?city=Johannesburg
+                            </pre> 
+                        <p>
+                            Currently, our site only lists hotspots in South Africa.
+                        </p>
+                    </div>
+                    <!--/span-->
+                </div>
+                <!--/row-->
+
+            </div>
+            <!--/span-->
+        </div>
+        <!--/row-->
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-80965-13']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+        $(function () {
+            if (window.location.href.toLowerCase().indexOf('about') != -1) {
+                $('#menuAbout').toggleClass('active');
+            }
+            else if (window.location.href.toLowerCase().indexOf('developers') != -1) {
+                $('#menuDevelopers').toggleClass('active');
+            }
+            else {
+                $('#menuHome').toggleClass('active');
+            }
+
+            //if (BKS.FFW.retVal("nearme") != null) {
+                //alert('showing near me');
+                //top.nearme = true;
+                
+               // $(".psCitySelector").trigger("click");
+            //}
+
+
+
+        });
+    </script>
+
+
+</div>                    <div class="modal hide fade" id="bsModal">                        <div class="modal-header">                            <button class="close" data-dismiss="modal">                                �</button>                                <h3 id="bsModalHeader">                                Modal header</h3>                        </div>                        <div class="modal-body">                            <p id="bsModalBody">                                �</p>                        </div>                        <div class="modal-footer" id="bsModalButtons">                                                    </div>                    </div></body></html>
